@@ -14,6 +14,9 @@ dns = Fog::DNS.new({
 newSet = ''
 dynRecord = '' #set the record you want to check and update here
 
+ipUrl = 'icanhazip.com'
+#ipUrl = 'ip.appspot.com'
+
 req = Net::HTTP::Get.new('/')
 res = Net::HTTP.start('icanhazip.com', 80) {|http|
   http.request(req)
